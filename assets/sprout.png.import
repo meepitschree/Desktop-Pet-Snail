@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cptm68w4cavrr"
-path="res://.godot/imported/temp_snail.png-a04ce053bb8e5e8ebb5372dd5ed68fe2.ctex"
+uid="uid://cr0je085uqagy"
+path="res://.godot/imported/sprout.png-98a4ab515d3bfdbd6f6db7d14b52ead7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp_snail.png"
-dest_files=["res://.godot/imported/temp_snail.png-a04ce053bb8e5e8ebb5372dd5ed68fe2.ctex"]
+source_file="res://assets/sprout.png"
+dest_files=["res://.godot/imported/sprout.png-98a4ab515d3bfdbd6f6db7d14b52ead7.ctex"]
 
 [params]
 

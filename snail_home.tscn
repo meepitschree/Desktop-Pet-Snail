@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn0oihga4imue"]
+
+[ext_resource type="Texture2D" uid="uid://cr0je085uqagy" path="res://assets/sprout.png" id="1_klg7e"]
+
+[sub_resource type="GDScript" id="GDScript_bp0bx"]
+script/source = "extends Window
+
+func _ready():
+	self.transparent = true
+	self.borderless = true
+	self.always_on_top = true
+	self.mouse_passthrough = false
+	self.size = Vector2(200, 200)
+
+	var usable = DisplayServer.get_display_safe_area()
+	
+	# Position home at bottom-left corner of the usable area
+	self.position = Vector2(usable.position.x + 500, usable.position.y + usable.size.y - self.size.y)
+	
+	$SproutSprite.position = self.size / 2
+	$SproutSprite.centered = true
+"
+
+[node name="SnailHomeRoot" type="Window"]
+auto_translate_mode = 1
+script = SubResource("GDScript_bp0bx")
+
+[node name="SproutSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_klg7e")
