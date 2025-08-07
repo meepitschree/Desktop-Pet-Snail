@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn0oihga4imue"]
+
+[ext_resource type="Texture2D" uid="uid://cr0je085uqagy" path="res://sprout.png" id="2_48iwe"]
+
+[sub_resource type="GDScript" id="GDScript_bp0bx"]
+script/source = "extends Node2D
+
+var window : Window
+
+func _ready():
+	window = get_window()
+	window.transparent = true
+	window.borderless = true
+	window.always_on_top = true
+	window.mouse_passthrough = false
+	window.size = Vector2(200, 200)
+
+	var usable = DisplayServer.get_display_safe_area()
+	
+	# Position home at bottom-left corner of the usable area
+	window.position = Vector2(usable.position.x, usable.position.y + usable.size.y - window.size.y)
+	
+	$HomeSprite.position = window.size / 2
+	$HomeSprite.centered = true
+"
+
+[node name="HomeBaseRoot" type="Node2D"]
+script = SubResource("GDScript_bp0bx")
+
+[node name="HomeSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_48iwe")
