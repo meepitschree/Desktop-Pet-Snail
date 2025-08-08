@@ -1,11 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhtvlkbyk24sr"]
+[gd_scene load_steps=6 format=3 uid="uid://bhtvlkbyk24sr"]
 
 [ext_resource type="Script" uid="uid://hxf4wgim0rp4" path="res://snail_root.gd" id="1_03g26"]
+[ext_resource type="Texture2D" uid="uid://n618ejkqaut7" path="res://assets/temp_snail_top.png" id="2_4w31b"]
 [ext_resource type="Texture2D" uid="uid://cptm68w4cavrr" path="res://assets/temp_snail.png" id="2_insh8"]
 [ext_resource type="Texture2D" uid="uid://cudf3jpxwjikm" path="res://assets/temp_snail_2.png" id="3_4w31b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_58xrm"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_insh8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4w31b")
+}],
+"loop": true,
+"name": &"top_down",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_insh8")
@@ -24,4 +41,4 @@ script = ExtResource("1_03g26")
 
 [node name="Snail" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_58xrm")
-animation = &"walk"
+animation = &"idle"
